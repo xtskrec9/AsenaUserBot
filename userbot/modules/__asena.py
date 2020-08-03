@@ -12,7 +12,7 @@
 from userbot import CMD_HELP
 from userbot.events import register
 
-@register(outgoing=True, pattern="^.asena(?: |$)(.*)")
+@register(outgoing=True, pattern="^.benita(?: |$)(.*)")
 async def asena(event):
     """ .asena komutu için """
     args = event.pattern_match.group(1).lower()
@@ -20,10 +20,10 @@ async def asena(event):
         if args in CMD_HELP:
             await event.edit(str(CMD_HELP[args]))
         else:
-            await event.edit("Lütfen bir Asena modülü adı belirtin.")
+            await event.edit("Lütfen bir benitauserbot modülü adı belirtin.")
     else:
-        await event.edit("Lütfen hangi Asena modülü için yardım istediğinizi belirtin !!\
-            \nKullanım: .asena <modül adı>")
+        await event.edit("Lütfen hangi UserBot modülü için yardım istediğinizi belirtin !!\
+            \nKullanım: .benita <modül adı>")
         string = ""
         for i in CMD_HELP:
             string += "`" + str(i)
